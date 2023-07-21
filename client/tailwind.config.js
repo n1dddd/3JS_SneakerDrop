@@ -9,8 +9,8 @@ export default {
       fontFamily: {
         ChakraPetch: ["Chakra Petch","sans-serif"]
       },
-      backgroundImage: {
-        'hero': "url('/landing_page.jpg')"
+      backgroundColor: {
+         'bg-color': 'rgb(211,235,255)',
       }
     },
   },
