@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Chakra Petch, system-ui, sans-serif
+  }
+  body {
+    background: rgb(211,235,255);
+    background: linear-gradient(278deg, rgba(189,227,204,0.8), rgba(183,0,246,0.1));
+  }
+}
+
+.app {
+  @apply flex w-screen h-screen overflow-auto;
+}
+
+.home {
+  @apply flex w-screen h-screen overflow-auto;
+}
+
+.home-page-header-left {
+  @apply flex opacity-70 left-48 top-36 xl:text-[9rem] text-[6rem];
+}
+
+.home-page-header-right {
+  @apply flex opacity-70 right-48 bottom-36 xl:text-[9rem] text-[6rem];
+}
+
+@media only screen and (max-width: 1280px) {
+  .home-page-header-left {
+    @apply absolute opacity-70 left-24 top-32 xl:text-[8rem] text-[5rem]
+  }
+  
+  .home-page-header-right {
+    @apply absolute opacity-70 right-32 bottom-32 xl:text-[8rem] text-[5rem]
+  }
+}
