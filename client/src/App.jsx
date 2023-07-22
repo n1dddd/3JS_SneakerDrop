@@ -1,10 +1,10 @@
-import Jordan from "./canvas/Jordan"
+import Index from "./canvas/index"
 import "./app.css"
 
 function App() {
   return (
     <section className='home'>
-        <Jordan />
+        <Index />
     </section>
   )
 }
