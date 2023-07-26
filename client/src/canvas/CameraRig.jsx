@@ -1,22 +1,22 @@
 import React, { useRef } from 'react';
 import { useFrame } from "@react-three/fiber";
 import { easing } from "maath";
+import { useSnapshot } from 'valtio';
+
+import state from '../store';
 
 
-const CameraRig = ({ children }) => {
+const CameraRig = ({ children}) => {
     const group = useRef();
+    const snap = useSnapshot(state);
 
     useFrame((state, delta) => {
-        let targetPosition = [0, 3, 0];
-
-        easing.damp3(state.camera, targetPosition, 1, delta)
-
-        easing.dampE(
-            group.current.rotation,
-            [state.pointer.y / 2, -state.pointer.x / 0.2, 0],
-            0.25,
-            delta
-        )
+        if(snap.intro) {
+            easing.damp3(state.camera.position,  [0, 0, 0.6], 0.25, delta)
+        }
+        else {
+            easing.damp3(state.camera.position,  [-0.22, 0, 0.35], 0.25, delta)
+        }
     })
     return (
         <group ref={group}>{children}</group>
