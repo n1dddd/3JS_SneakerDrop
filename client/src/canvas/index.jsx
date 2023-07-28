@@ -54,9 +54,9 @@ const CanvasModel = () => {
     const handleFilter = (value) => {
         const individualShoe = shoes.findIndex(object => object.name === value)
         state.intro = false;
-        state.shoe = shoeComponent[individualShoe].key
-        console.log(state.shoe = shoeComponent[individualShoe].key)
-        setShoeComponent(shoeComponent[individualShoe])
+        state.shoe = shoeComponent[individualShoe].key;
+        console.log(state.shoe = shoeComponent[individualShoe].key);
+        setShoeComponent(shoeComponent[individualShoe]);
     }
 
     const snap = useSnapshot(state);
@@ -66,8 +66,8 @@ const CanvasModel = () => {
             shadows
             dpr={[1, 2]}
             camera={{ fov: 75 }}
-            className="w-full max-w-full h-full transition=all ease-in"
-        >
+            gl={{ preserveDrawingBuffer: true}}
+            className="w-screen h-full transition=all ease-in"        >
             <ambientLight intensity={0.5} />
             <Environment preset="forest" />
             <PresentationControls polar={[-0.1, 0.1]}>
