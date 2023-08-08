@@ -19,7 +19,7 @@ function Home() {
         {snap.intro && (<motion.div className="home-content" {...slideAnimation("down")}>
             <motion.div {...headTextAnimation}>
                 <h1 className="head-text">
-                    Just a bunch of Jordans
+                    Just a Bunch of Jordans
                 </h1>
             </motion.div>
         </motion.div>)}
