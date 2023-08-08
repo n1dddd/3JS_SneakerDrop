@@ -1,8 +1,10 @@
 import React from 'react'
 import { useSnapshot } from 'valtio'
+import { shoeDescriptions } from '../config/constants';
+import CustomButton from '../components/CustomButton';
 
 import state from '../store'
-import { shoeDescriptions } from '../config/constants';
+
 
 function Descriptions() {
 
@@ -23,6 +25,7 @@ function Descriptions() {
                 <p className="shoe-description-text ">
                     {shoeDescription()}
                 </p>
+                <CustomButton/>
             </div>}
         </>
     )
