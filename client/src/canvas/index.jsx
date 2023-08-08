@@ -42,21 +42,20 @@ const CanvasModel = () => {
         },
     ]
 
-    let shoeComponentArray = shoes.map((shoeObject) => {
+    let shoesComponentArray = shoes.map((shoeObject) => {
         return (
                 <mesh onClick={() => handleFilter(shoeObject.name)} key={shoeObject.name} rotation={[-Math.PI / 2, -0.01, 0]} polar={[0, 0, Math.PI / 4]} geometry={shoeObject.geometry} material={shoeObject.material} />
         )
     })
 
-    const [shoeComponent, setShoeComponent] = useState(shoeComponentArray)
+    const [shoeComponent, setShoeComponent] = useState()
 
 
     const handleFilter = (value) => {
         const individualShoe = shoes.findIndex(object => object.name === value)
         state.intro = false;
-        state.shoe = shoeComponent[individualShoe].key;
-        console.log(state.shoe = shoeComponent[individualShoe].key);
-        setShoeComponent(shoeComponent[individualShoe]);
+        state.shoe = shoesComponentArray[individualShoe].key;
+        setShoeComponent(shoesComponentArray[individualShoe]);
     }
 
     const snap = useSnapshot(state);
@@ -72,7 +71,7 @@ const CanvasModel = () => {
             <Environment preset="forest" />
             <PresentationControls polar={[-0.1, 0.1]}>
                 <CameraRig>
-                        {snap.intro ? (<group><Center>{shoeComponent}</Center></group>) : (<Center><group>{shoeComponent}</group></Center>)}
+                        {snap.intro ? (<group><Center>{shoesComponentArray}</Center></group>) : (<Center><group>{shoeComponent}</group></Center>)}
                 </CameraRig>
             </PresentationControls>
         </Canvas >
