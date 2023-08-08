@@ -1,8 +1,13 @@
-import React from 'react'
+import state from '../store'
 
-function CustomButton() {
+const CustomButton = () => {
+
   return (
-    <div>CustomButton</div>
+    <button
+      className="back-button"
+      onClick={() => state.intro = true}
+    >Back to the shoes
+    </button>
   )
 }
 
