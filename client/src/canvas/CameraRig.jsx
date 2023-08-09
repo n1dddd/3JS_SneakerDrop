@@ -20,6 +20,7 @@ const CameraRig = ({ children}) => {
 
     useFrame((state, delta) => {
         if(snap.intro) {
+            if(isBreakpoint1280) allShoesTargetPos = [0, 0, 1.2]
             if(isBreakpoint960) allShoesTargetPos = [0, 0, 0.8]
             if(isBreakpoint760) allShoesTargetPos = [0, 0, 1]
             if(isBreakpointMobile) allShoesTargetPos = [0, 0, 1.4]
