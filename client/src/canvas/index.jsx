@@ -69,7 +69,7 @@ const CanvasModel = () => {
             className="w-screen h-full transition=all ease-in"        >
             <ambientLight intensity={0.5} />
             <Environment preset="forest" />
-            <PresentationControls polar={[-0.1, 0.1]}>
+            <PresentationControls polar={[-0.1, 0.1]} global={true}>
                 <CameraRig>
                         {snap.intro ? (<group><Center>{shoesComponentArray}</Center></group>) : (<Center><group>{shoeComponent}</group></Center>)}
                 </CameraRig>
