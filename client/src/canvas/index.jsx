@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { Canvas, useThree } from '@react-three/fiber';
-import { Environment, Center, PresentationControls } from "@react-three/drei";
+import { Suspense, useState } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { Environment, Center, PresentationControls, Loader } from "@react-three/drei";
 import { useGLTF } from '@react-three/drei';
 import { useSnapshot } from 'valtio';
 import CameraRig from './CameraRig';
@@ -44,7 +44,7 @@ const CanvasModel = () => {
 
     let shoesComponentArray = shoes.map((shoeObject) => {
         return (
-                <mesh onClick={() => handleFilter(shoeObject.name)} key={shoeObject.name} rotation={[-Math.PI / 2, -0.01, 0]} polar={[0, 0, Math.PI / 4]} geometry={shoeObject.geometry} material={shoeObject.material} />
+            <mesh onClick={() => handleFilter(shoeObject.name)} key={shoeObject.name} rotation={[-Math.PI / 2, -0.01, 0]} polar={[0, 0, Math.PI / 4]} geometry={shoeObject.geometry} material={shoeObject.material} />
         )
     })
 
@@ -61,20 +61,25 @@ const CanvasModel = () => {
     const snap = useSnapshot(state);
 
     return (
-        <Canvas
-            shadows
-            dpr={[1, 2]}
-            camera={{ fov: 75 }}
-            gl={{ preserveDrawingBuffer: true}}
-            className="w-screen h-full transition=all ease-in"        >
-            <ambientLight intensity={0.5} />
-            <Environment preset="forest" />
-            <PresentationControls polar={[-0.1, 0.1]} global={true}>
-                <CameraRig>
-                        {snap.intro ? (<group><Center>{shoesComponentArray}</Center></group>) : (<Center><group>{shoeComponent}</group></Center>)}
-                </CameraRig>
-            </PresentationControls>
-        </Canvas >
+        <>
+            <Canvas
+                shadows
+                dpr={[1, 2]}
+                camera={{ fov: 75 }}
+                gl={{ preserveDrawingBuffer: true }}
+                className="w-screen h-full transition=all ease-in"        >
+                <Suspense fallback={null}>
+                    <ambientLight intensity={0.5} />
+                    <Environment preset="forest" />
+                    <PresentationControls polar={[-0.1, 0.1]} global={true}>
+                        <CameraRig>
+                            {snap.intro ? (<group><Center>{shoesComponentArray}</Center></group>) : (<Center><group>{shoeComponent}</group></Center>)}
+                        </CameraRig>
+                    </PresentationControls>
+                </Suspense>
+            </Canvas >
+            <Loader />
+        </>
     )
 }
 
