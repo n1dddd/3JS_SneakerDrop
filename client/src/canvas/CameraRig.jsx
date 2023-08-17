@@ -6,7 +6,7 @@ import { useSnapshot } from 'valtio';
 import state from '../store';
 
 
-const CameraRig = ({ children}) => {
+const CameraRig = ({ children }) => {
     const group = useRef();
     const snap = useSnapshot(state);
 
@@ -19,20 +19,20 @@ const CameraRig = ({ children}) => {
     let singleShoeTargetPos = [-0.18, 0, 0.35];
 
     useFrame((state, delta) => {
-        if(snap.intro) {
-            if(isBreakpoint1280) allShoesTargetPos = [0, 0, 1.2]
-            if(isBreakpoint960) allShoesTargetPos = [0, 0, 0.8]
-            if(isBreakpoint760) allShoesTargetPos = [0, 0, 1]
-            if(isBreakpointMobile) allShoesTargetPos = [0, 0, 1.4]
+        if (snap.intro) {
+            if (isBreakpoint1280) allShoesTargetPos = [0, 0, 0.6]
+            if (isBreakpoint960) allShoesTargetPos = [0, 0, 0.7]
+            if (isBreakpoint760) allShoesTargetPos = [0, 0, 0.8]
+            if (isBreakpointMobile) allShoesTargetPos = [0, 0, 1]
             easing.damp3(state.camera.position, allShoesTargetPos, 0.3, delta)
 
         }
         else {
-            if(isBreakpoint1280) singleShoeTargetPos = [0, -0.15, 0.5];
-            easing.damp3(state.camera.position, singleShoeTargetPos , 0.3, delta)
+            if (isBreakpoint1280) singleShoeTargetPos = [0, -0.2, 0.5];
+            easing.damp3(state.camera.position, singleShoeTargetPos, 0.3, delta)
         }
     })
-    
+
     return (
         <group ref={group}>{children}</group>
     )
