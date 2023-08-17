@@ -68,17 +68,16 @@ const CanvasModel = () => {
                 camera={{ fov: 75 }}
                 gl={{ preserveDrawingBuffer: true }}
                 className="w-screen h-full transition=all ease-in"        >
-                <Suspense fallback={null}>
-                    <ambientLight intensity={0.5} />
-                    <Environment preset="forest" />
-                    <PresentationControls polar={[-0.1, 0.1]} global={true}>
-                        <CameraRig>
+                <ambientLight intensity={0.5} />
+                <Environment preset="forest" />
+                <PresentationControls polar={[-0.2, 0.2]} global={true}>
+                    <CameraRig>
+                        <Suspense fallback={null}>
                             {snap.intro ? (<group><Center>{shoesComponentArray}</Center></group>) : (<Center><group>{shoeComponent}</group></Center>)}
-                        </CameraRig>
-                    </PresentationControls>
-                </Suspense>
+                        </Suspense>
+                    </CameraRig>
+                </PresentationControls>
             </Canvas >
-            <Loader />
         </>
     )
 }
