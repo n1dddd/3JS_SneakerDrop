@@ -19,11 +19,11 @@
 }
 
 .home-content {
-  @apply flex absolute m-auto left-0 right-0 justify-center gap-10;
+  @apply flex flex-col items-center absolute m-auto left-0 right-0 justify-center gap-4;
 }
 
 .head-text {
-  @apply opacity-60 xl:text-[6rem] lg:text-[5.1rem] md:text-[4rem] sm:text-[3.3rem] xsm:text-[1.8rem] xl:leading-[11rem] leading-[7rem] font-black text-black;
+  @apply opacity-75 xl:text-[6rem] lg:text-[5.1rem] md:text-[4rem] sm:text-[3.3rem] xsm:text-[1.8rem] xl:leading-[11rem] leading-[7rem] font-black text-black drop-shadow-2xl shadow-black;
 }
 
 .shoe-description-card {
@@ -31,9 +31,101 @@
 }
 
 .shoe-description-text {
-  @apply m-4 text-justify xl:text-[0.95rem] lg:text-[0.7rem] md:text-[0.6rem] sm:text-[0.55rem] xsm:text-[0.53rem] font-black text-black;
+  @apply m-4 text-justify xl:text-[0.95rem] lg:text-[0.7rem] md:text-[0.65rem] sm:text-[0.55rem] xsm:text-[0.55rem] font-black text-black;
 }
 
 .back-button {
   @apply flex m-2 justify-center py-2.5 font-bold xl:text-4xl border-2 border-black rounded-md;
+}
+
+.progressCard {
+  @apply flex fixed top-1/2 left-1/2 z-10
+}
+
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.underhead-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  font-weight: 800;
+  animation: blink 5s infinite;
+}
+
+
+.loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: inherit;
+  background-image: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 8s;
+  z-index: 1;
+}
+
+.loadingScreen__board {
+  padding: 64px;
+  background-color: rgba(35, 75, 145, 0.42);
+  border-radius: 24px;
+  text-align: center;
+  border: solid 6px rgb(0 0 0 / 12%);
+  opacity: 80%;
+  transition: opacity 0.4s;
+}
+
+.loadingScreen__title {
+  font-size: 4rem;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  margin-bottom: 8px;
+  filter: drop-shadow(59px 2px 40px #986767);
+}
+
+.loadingScreen__button {
+  padding: 8px 32px;
+  background-color: rgba(0, 0, 0, 0.24);
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 2.5rem;
+  border-radius: 8px;
+  transition: background-color 0.4s;
+}
+
+.loadingScreen__button:hover {
+  background-color: rgba(0, 0, 0, 0.42);
+  cursor: pointer;
+}
+
+.loadingScreen__button:disabled {
+  opacity: 0.1;
+  cursor: not-allowed;
+}
+
+.loadingScreen--started {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loadingScreen--started .loadingScreen__board {
+  opacity: 0;
 }
