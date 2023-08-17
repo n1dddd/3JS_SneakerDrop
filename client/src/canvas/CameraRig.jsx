@@ -22,8 +22,8 @@ const CameraRig = ({ children }) => {
         if (snap.intro) {
             if (isBreakpoint1280) allShoesTargetPos = [0, 0, 0.6]
             if (isBreakpoint960) allShoesTargetPos = [0, 0, 0.7]
-            if (isBreakpoint760) allShoesTargetPos = [0, 0, 0.8]
-            if (isBreakpointMobile) allShoesTargetPos = [0, 0, 1]
+            if (isBreakpoint760) allShoesTargetPos = [0, 0, 0.9]
+            if (isBreakpointMobile) allShoesTargetPos = [0, 0, 1.4]
             easing.damp3(state.camera.position, allShoesTargetPos, 0.3, delta)
 
         }
