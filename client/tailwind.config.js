@@ -27,7 +27,10 @@ export default {
       },
       backgroundColor: {
          'bg-color': 'rgb(211,235,255)',
-      }
+      },
+      transitionDuration: {
+        '8000': '8000ms'
+      },
     },
   },
   plugins: [],
