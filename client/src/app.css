@@ -31,7 +31,7 @@
 }
 
 .shoe-description-text {
-  @apply m-4 text-justify xl:text-[0.95rem] lg:text-[0.7rem] md:text-[0.65rem] sm:text-[0.55rem] xsm:text-[0.55rem] font-black text-black;
+  @apply m-4 text-justify xl:text-[0.95rem] lg:text-[0.7rem] md:text-[0.65rem] sm:text-[0.61rem] xsm:text-[0.59rem] font-black text-black;
 }
 
 .back-button {
