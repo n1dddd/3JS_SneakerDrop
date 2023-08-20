@@ -19,7 +19,7 @@ const Home = () => {
           Just a Bunch of Jordans
         </h1>
         <h2 className="underhead-text">
-          Click a Shoe
+          Spin a Shoe...Click a Shoe
         </h2>
       </div>    
         )}
