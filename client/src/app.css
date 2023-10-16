@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    font-family: Karla, system-ui, sans-serif
+    font-family: Karla, system-ui, sans-serif;
   }
 }
 
@@ -27,11 +27,11 @@
 }
 
 .shoe-description-card {
-  @apply flex absolute xl:bottom-auto xl:w-2/5 xl:left-20 xl:top-1/4 lg:justify-center lg:w-1/2 lg:inset-x-0 lg:bottom-4 lg:left-1/4 md:inset-x-0 md:bottom-4 md:left-1/4 md:w-1/2 sm:inset-x-0 sm:bottom-16 sm:left-1/4 sm:w-1/2 xsm:inset-x-0 xsm:bottom-0 xsm:w-fit flex-col rounded-xl bg-white/20 shadow-xl shadow-black border-black/50 border-s-0;
+  @apply flex absolute xl:bottom-auto xl:w-2/5 xl:left-20 self-center lg:justify-center lg:w-1/2 lg:inset-x-0 lg:bottom-4 lg:left-1/4 md:inset-x-0 md:bottom-4 md:left-1/4 md:w-1/2 sm:inset-x-0 sm:bottom-16 sm:left-1/4 sm:w-1/2 xsm:inset-x-0 xsm:bottom-0 xsm:w-fit flex-col rounded-xl bg-white/20 shadow-xl shadow-black border-black/50 border-s-0;
 }
 
 .shoe-description-text {
-  @apply m-4 text-justify xl:text-[0.95rem] lg:text-[0.7rem] md:text-[0.65rem] sm:text-[0.61rem] xsm:text-[0.59rem] font-black text-black;
+  @apply m-4 text-justify xl:text-[0.95rem] lg:text-[0.85rem] md:text-[0.75rem] sm:text-[0.65rem] xsm:text-[0.63rem] font-black text-black;
 }
 
 .back-button {
@@ -39,9 +39,8 @@
 }
 
 .progressCard {
-  @apply flex fixed top-1/2 left-1/2 z-10
+  @apply flex fixed top-1/2 left-1/2 z-10;
 }
-
 
 @keyframes blink {
   0% {
@@ -66,9 +65,8 @@
   animation: blink 5s infinite;
 }
 
-
 .loadingScreen {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
@@ -83,30 +81,41 @@
 }
 
 .loadingScreen__board {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
   padding: 64px;
-  background-color: rgba(35, 75, 145, 0.42);
+  background-color: rgb(237, 240, 244, 0.45);
   border-radius: 24px;
   text-align: center;
   border: solid 6px rgb(0 0 0 / 12%);
-  opacity: 80%;
   transition: opacity 0.4s;
+  text-align: center;
 }
 
 .loadingScreen__title {
-  font-size: 4rem;
-  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  color: rgba(90, 84, 84, 0.5);
   margin: 0;
   margin-bottom: 8px;
   filter: drop-shadow(59px 2px 40px #986767);
 }
+@media screen and (min-width: 900px) {
+  .loadingScreen__title {
+    font-size: 4rem;
+  }
+  .loadingScreen__button {
+    font-size: 2.5rem;
+  }
+}
 
 .loadingScreen__button {
-  padding: 8px 32px;
+  display: flex;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.24);
   color: white;
   border: none;
   font-weight: bold;
-  font-size: 2.5rem;
   border-radius: 8px;
   transition: background-color 0.4s;
 }
