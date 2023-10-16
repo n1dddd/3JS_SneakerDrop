@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { useFrame } from "@react-three/fiber";
 import { easing } from "maath";
 import { useSnapshot } from 'valtio';
@@ -24,12 +24,12 @@ const CameraRig = ({ children }) => {
             if (isBreakpoint960) allShoesTargetPos = [0, 0, 0.7]
             if (isBreakpoint760) allShoesTargetPos = [0, 0, 0.9]
             if (isBreakpointMobile) allShoesTargetPos = [0, 0, 1.4]
-            easing.damp3(state.camera.position, allShoesTargetPos, 0.3, delta)
+            return easing.damp3(state.camera.position, allShoesTargetPos, 0.3, delta)
 
         }
         else {
             if (isBreakpoint1280) singleShoeTargetPos = [0, -0.2, 0.5];
-            easing.damp3(state.camera.position, singleShoeTargetPos, 0.3, delta)
+            return easing.damp3(state.camera.position, singleShoeTargetPos, 0.3, delta)
         }
     })
 
