@@ -1,14 +1,7 @@
-import { motion, AnimatePresence } from 'framer-motion';
 import { useSnapshot } from 'valtio';
 
 import state from '../store';
 
-import {
-  headContainerAnimation,
-  headContentAnimation,
-  headTextAnimation,
-  slideAnimation
-} from '../config/motion'
 
 const Home = () => {
   const snap = useSnapshot(state);
@@ -21,8 +14,8 @@ const Home = () => {
         <h2 className="underhead-text">
           Spin a Shoe...Click a Shoe
         </h2>
-      </div>    
-        )}
+      </div>
+      )}
     </>
   )
 }
