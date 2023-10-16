@@ -1,4 +1,3 @@
-import React from 'react'
 import { useSnapshot } from 'valtio'
 import { shoeDescriptions } from '../config/constants';
 import CustomButton from '../components/CustomButton';
