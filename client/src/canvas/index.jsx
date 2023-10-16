@@ -1,6 +1,6 @@
 import { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Environment, Center, PresentationControls, Loader } from "@react-three/drei";
+import { Environment, Center, PresentationControls } from "@react-three/drei";
 import { useGLTF } from '@react-three/drei';
 import { useSnapshot } from 'valtio';
 import CameraRig from './CameraRig';
@@ -67,7 +67,7 @@ const CanvasModel = () => {
                 dpr={[1, 2]}
                 camera={{ fov: 75 }}
                 gl={{ preserveDrawingBuffer: true }}
-                className="w-screen h-full transition=all ease-in"        >
+                className="w-screen h-full transition=all ease-in touch-none">
                 <ambientLight intensity={0.5} />
                 <Environment preset="forest" />
                 <PresentationControls polar={[-0.2, 0.2]} global={true}>
