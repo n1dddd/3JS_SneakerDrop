@@ -27,11 +27,11 @@
 }
 
 .shoe-description-card {
-  @apply flex absolute xl:bottom-auto xl:w-2/5 xl:left-20 self-center lg:justify-center lg:w-1/2 lg:inset-x-0 lg:bottom-4 lg:left-1/4 md:inset-x-0 md:bottom-4 md:left-1/4 md:w-1/2 sm:inset-x-0 sm:bottom-8 sm:left-1/4 sm:w-1/2 xsm:inset-x-0 xsm:bottom-0 xsm:w-fit flex-col rounded-xl bg-white/20 shadow-xl shadow-black border-black/50 border-s-0;
+  @apply flex absolute flex-col rounded-xl bg-white/20 shadow-xl shadow-black border-black/50 border-s-0 xl:bottom-auto xl:w-2/5 xl:left-20 xl:self-center lg:self-center lg:justify-center lg:w-1/2 lg:inset-x-0 lg:bottom-4 lg:left-1/4 md:inset-x-0 md:bottom-4 sm:inset-x-0 sm:self-end xsm:inset-x-0 xsm:self-end;
 }
 
 .shoe-description-text {
-  @apply m-4 text-justify xl:text-[0.95rem] lg:text-[0.85rem] md:text-[0.75rem] sm:text-[0.65rem] xsm:text-[0.63rem] font-black text-black;
+  @apply m-4 text-justify xl:text-[0.95rem] lg:text-[0.85rem] md:text-[0.9rem] sm:text-[0.85rem] xsm:text-[0.75rem] font-black text-black;
 }
 
 .back-button {
