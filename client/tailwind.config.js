@@ -8,7 +8,7 @@ export default {
     screens: {
       'xsm': '100px',
       // => @media (min-width: 640px) { ... }
-      
+
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
@@ -23,16 +23,18 @@ export default {
     },
     extend: {
       fontFamily: {
-        Karla: ["Karla","sans-serif"]
+        Karla: ["Karla", "sans-serif"]
       },
       backgroundColor: {
-         'bg-color': 'rgb(211,235,255)',
+        'bg-color': 'rgb(211,235,255)',
       },
       transitionDuration: {
         '8000': '8000ms'
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')
+  ],
 }
 
