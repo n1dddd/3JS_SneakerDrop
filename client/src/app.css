@@ -27,7 +27,7 @@
 }
 
 .shoe-description-card {
-  @apply m-2 flex absolute flex-col rounded-xl bg-white/20 shadow-xl shadow-black border-black/50 border-s-0 scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100 xl:bottom-auto xl:inset-x-0 xl:w-2/5 xl:left-20 xl:self-center
+  @apply flex absolute mb-2 flex-col rounded-xl bg-white/20 shadow-md shadow-black border-black/50 border-s-0 scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100 xl:bottom-auto xl:inset-x-0 xl:w-2/5 xl:left-20 xl:self-center
   lg:self-center lg:w-1/2 lg:inset-x-0 lg:bottom-4 lg:left-1/4 md:overflow-auto md:inset-x-0 md:bottom-4 sm:inset-x-0 sm:self-end xsm:mt-2 xsm:inset-x-0 xsm:self-end xsm:h-1/2 xsm:overflow-auto;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .back-button {
-  @apply flex m-2 justify-center py-2.5 font-bold xl:text-4xl border-2 border-black rounded-md;
+  @apply flex w-11/12 relative mb-2 self-center relative bottom-0 justify-center py-2.5 font-bold xl:text-4xl border-2 border-black rounded-md;
 }
 
 .progressCard {
