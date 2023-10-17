@@ -27,7 +27,8 @@
 }
 
 .shoe-description-card {
-  @apply flex absolute flex-col rounded-xl bg-white/20 shadow-xl shadow-black border-black/50 border-s-0 xl:bottom-auto xl:w-2/5 xl:left-20 xl:self-center lg:self-center lg:justify-center lg:w-1/2 lg:inset-x-0 lg:bottom-4 lg:left-1/4 md:inset-x-0 md:bottom-4 sm:inset-x-0 sm:self-end xsm:inset-x-0 xsm:self-end;
+  @apply m-2 flex absolute flex-col rounded-xl bg-white/20 shadow-xl shadow-black border-black/50 border-s-0 scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100 xl:bottom-auto xl:inset-x-0 xl:w-2/5 xl:left-20 xl:self-center
+  lg:self-center lg:w-1/2 lg:inset-x-0 lg:bottom-4 lg:left-1/4 md:overflow-auto md:inset-x-0 md:bottom-4 sm:inset-x-0 sm:self-end xsm:mt-2 xsm:inset-x-0 xsm:self-end xsm:h-1/2 xsm:overflow-auto;
 }
 
 .shoe-description-text {
