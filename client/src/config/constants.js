@@ -58,7 +58,7 @@ export const shoeDescriptions = {
         {description: `
             The Air Jordan 1 "Black White" is a timeless high-top sneaker that holds a significant place in the history of footwear and basketball culture.
             As the first signature shoe of the legendary Michael Jordan, it made its initial debut in 1985 alongside the iconic Chicago colorway, forever
-            altering the landscape of athletic footwear.Over the years, the Air Jordan 1 "Black White" has remained a highly sought-after and coveted sneaker 
+            altering the landscape of athletic footwear. Over the years, the Air Jordan 1 "Black White" has remained a highly sought-after and coveted sneaker 
             among sneaker enthusiasts, basketball fans, and fashion aficionados alike. Its enduring popularity has led to numerous re-releases and special 
             editions, allowing new generations to experience the rich history and legacy that this iconic shoe carries. The Air Jordan 1 "Black White" stands 
             as a symbol of innovation, style, and Michael Jordan's groundbreaking influence on both the game of basketball and the world of sneakers. Its 
