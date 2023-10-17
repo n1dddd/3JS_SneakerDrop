@@ -67,7 +67,7 @@ const CanvasModel = () => {
                 dpr={[1, 2]}
                 camera={{ fov: 75 }}
                 gl={{ preserveDrawingBuffer: true }}
-                className="w-screen h-full transition=all ease-in touch-none">
+                className="transition=all ease-in touch-none z-0">
                 <ambientLight intensity={0.5} />
                 <Environment preset="forest" />
                 <PresentationControls polar={[-0.2, 0.2]} global={true}>
